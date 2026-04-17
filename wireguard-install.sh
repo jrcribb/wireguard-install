@@ -291,7 +291,7 @@ if [[ ! -e /etc/wireguard/wg0.conf ]]; then
 		echo "BoringTun will be installed to set up WireGuard on the system."
 		read -p "Should automatic updates be enabled for it? [Y/n]: " boringtun_updates
 		until [[ "$boringtun_updates" =~ ^[yYnN]*$ ]]; do
-			echo "$remove: invalid selection."
+			echo "$boringtun_updates: invalid selection."
 			read -p "Should automatic updates be enabled for it? [Y/n]: " boringtun_updates
 		done
 		[[ -z "$boringtun_updates" ]] && boringtun_updates="y"
